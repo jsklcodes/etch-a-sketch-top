@@ -104,3 +104,30 @@ input[type='color'] {
   flex-wrap: wrap;
   gap: 1.2rem;
 }
+
+/* ============ board ============ */
+.board,
+.square-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.board {
+  user-select: none;
+  aspect-ratio: 1 / 1;
+  width: min(100%, 60rem);
+  background-color: hsl(0, 0%, 100%);
+}
+
+.square-row,
+.square {
+  flex: 1;
+}
+
+.square-row {
+  flex-direction: column;
+}
+
+.guide {
+  box-shadow: inset 0 0 0 .1rem hsl(0, 0%, 93%);
+}
