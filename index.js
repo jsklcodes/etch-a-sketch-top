@@ -26,3 +26,12 @@ const createSquareHtml = () => {
   const square = `<div class="square"></div>`
   return square
 }
+
+const createSquareRowHtml = numberOfSquares => {
+  const square = createSquareHtml()
+  const squareRow = `<div class="square-row">${square.repeat(
+    numberOfSquares
+  )}</div>`
+
+  return squareRow
+}
