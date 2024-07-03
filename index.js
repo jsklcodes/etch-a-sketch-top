@@ -63,6 +63,14 @@ const handleChangeBoardSize = event => {
   renderSquareRowsIntoBoard(boardSize)
 }
 
+const changeRandomColorButtonText = () => {
+  const randomColorButtonTextPrefix = randomColorModeIsActived
+    ? 'Desactive'
+    : 'Active'
+
+  randomColorButton.textContent = `${randomColorButtonTextPrefix} random color mode`
+}
+
 document.addEventListener('DOMContentLoaded', renderSquareRowsIntoBoard(16))
 boardDiv.addEventListener('mousedown', () => (mouseIsDown = true))
 boardDiv.addEventListener('mouseup', () => (mouseIsDown = false))
