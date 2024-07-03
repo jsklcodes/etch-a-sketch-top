@@ -89,6 +89,19 @@ const changeBoardGuidesButtonText = () => {
   boardGuidesButton.textContent = `${boardGuidesButtonTextPrefix} board guides`
 }
 
+const handleBoardGuidesToggle = event => {
+  boardGuidesIsActived = !boardGuidesIsActived
+  changeBoardGuidesButtonText()
+
+  const squares = document.querySelectorAll('.square')
+
+  if (boardGuidesIsActived) {
+    squares.forEach(square => square.classList.add('guide'))
+  } else {
+    squares.forEach(square => square.classList.remove('guide'))
+  }
+}
+
 document.addEventListener('DOMContentLoaded', renderSquareRowsIntoBoard(16))
 boardDiv.addEventListener('mousedown', () => (mouseIsDown = true))
 boardDiv.addEventListener('mouseup', () => (mouseIsDown = false))
@@ -97,3 +110,4 @@ boardSizeButton.addEventListener('click', handleChangeBoardSize)
 randomColorButton.addEventListener('click', handleRandomColorModeToggle)
 colorInput.addEventListener('change', changeRandomColorButtonText)
 colorInput.addEventListener('input', handleColorSelection)
+boardGuidesButton.addEventListener('click', handleBoardGuidesToggle)
