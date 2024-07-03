@@ -76,6 +76,11 @@ const handleRandomColorModeToggle = event => {
   changeRandomColorButtonText()
 }
 
+const handleColorSelection = event => {
+  currentColor = event.target.value
+  randomColorModeIsActived = false
+}
+
 document.addEventListener('DOMContentLoaded', renderSquareRowsIntoBoard(16))
 boardDiv.addEventListener('mousedown', () => (mouseIsDown = true))
 boardDiv.addEventListener('mouseup', () => (mouseIsDown = false))
@@ -83,3 +88,4 @@ boardDiv.addEventListener('mousemove', handleMouseMoveOnBoard)
 boardSizeButton.addEventListener('click', handleChangeBoardSize)
 randomColorButton.addEventListener('click', handleRandomColorModeToggle)
 colorInput.addEventListener('change', changeRandomColorButtonText)
+colorInput.addEventListener('input', handleColorSelection)
