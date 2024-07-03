@@ -41,6 +41,18 @@ const renderSquareRowsIntoBoard = numberOfRows => {
   boardDiv.insertAdjacentHTML('afterbegin', squareRows.repeat(numberOfRows))
 }
 
+const toggleBoardGuides = () => {
+  const squares = document.querySelectorAll('.square')
+
+  console.log(squares)
+
+  if (boardGuidesIsActived) {
+    squares.forEach(square => square.classList.add('guide'))
+  } else {
+    squares.forEach(square => square.classList.remove('guide'))
+  }
+}
+
 const handleMouseMoveOnBoard = event => {
   if (mouseIsDown && randomColorModeIsActived) {
     event.target.style.backgroundColor = generateRandomHSLColor()
@@ -92,14 +104,7 @@ const changeBoardGuidesButtonText = () => {
 const handleBoardGuidesToggle = event => {
   boardGuidesIsActived = !boardGuidesIsActived
   changeBoardGuidesButtonText()
-
-  const squares = document.querySelectorAll('.square')
-
-  if (boardGuidesIsActived) {
-    squares.forEach(square => square.classList.add('guide'))
-  } else {
-    squares.forEach(square => square.classList.remove('guide'))
-  }
+  toggleBoardGuides()
 }
 
 const handleClearBoard = event => {
