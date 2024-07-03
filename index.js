@@ -13,3 +13,11 @@ let boardGuidesIsActived = false
 const generateRandomNumberByRange = (min, max) => {
   return Math.floor(Math.random() * (max - min)) + min
 }
+
+const generateRandomHSLColor = () => {
+  const hue = generateRandomNumberByRange(0, 360)
+  const saturation = generateRandomNumberByRange(20, 100)
+  const lightness = generateRandomNumberByRange(20, 100)
+
+  return `hsl(${hue} ${saturation} ${lightness})`
+}
