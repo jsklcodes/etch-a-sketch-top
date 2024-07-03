@@ -23,7 +23,7 @@ body {
   font-size: 1.6rem;
   line-height: 1.5;
 
-  background-color: #eeeeee;
+  background-color: hsl(0, 0%, 93%);
 }
 
 button,
@@ -72,7 +72,7 @@ input[type='color'] {
   padding: 0.4rem 1.2rem;
   font: inherit;
   font-size: 1.4rem;
-  color: #eee;
+  color: hsl(0, 0%, 93%);
   transition: background-color 0.3s ease;
 }
 
