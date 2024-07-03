@@ -65,3 +65,42 @@ input[type='color'] {
   grid-template-rows: auto 1fr;
   height: 100%;
 }
+
+/* ============ buttons ============ */
+.button {
+  background-color: hsl(255, 8%, 12%);
+  padding: 0.4rem 1.2rem;
+  font: inherit;
+  font-size: 1.4rem;
+  color: #eee;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover,
+.button-danger:hover {
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: hsl(255, 8%, 14%);
+}
+
+.button-danger {
+  background-color: hsl(0, 74%, 59%);
+}
+
+.button-danger:hover {
+  background-color: hsl(0, 74%, 61%);
+}
+
+/* ============ header ============ */
+.header {
+  background-color: hsl(255, 8%, 10%);
+  padding-block: 2rem;
+}
+
+/* ============ tool-bar ============ */
+.tool-bar {
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
