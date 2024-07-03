@@ -44,8 +44,6 @@ const renderSquareRowsIntoBoard = numberOfRows => {
 const toggleBoardGuides = () => {
   const squares = document.querySelectorAll('.square')
 
-  console.log(squares)
-
   if (boardGuidesIsActived) {
     squares.forEach(square => square.classList.add('guide'))
   } else {
