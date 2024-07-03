@@ -41,6 +41,15 @@ const renderSquareRowsIntoBoard = numberOfRows => {
   boardDiv.insertAdjacentHTML('afterbegin', squareRows.repeat(numberOfRows))
 }
 
+const handleMouseMoveOnBoard = event => {
+  if (mouseIsDown && randomColorModeIsActived) {
+    event.target.style.backgroundColor = generateRandomHSLColor()
+  } else if (mouseIsDown) {
+    event.target.style.backgroundColor = currentColor
+  }
+}
+
 document.addEventListener('DOMContentLoaded', renderSquareRowsIntoBoard(16))
 boardDiv.addEventListener('mousedown', () => (mouseIsDown = true))
 boardDiv.addEventListener('mouseup', () => (mouseIsDown = false))
+boardDiv.addEventListener('mousemove', handleMouseMoveOnBoard)
