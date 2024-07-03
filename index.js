@@ -40,3 +40,5 @@ const renderSquareRowsIntoBoard = numberOfRows => {
   const squareRows = createSquareRowHtml(numberOfRows)
   boardDiv.insertAdjacentHTML('afterbegin', squareRows.repeat(numberOfRows))
 }
+
+document.addEventListener('DOMContentLoaded', renderSquareRowsIntoBoard(16))
