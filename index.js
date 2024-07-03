@@ -42,3 +42,5 @@ const renderSquareRowsIntoBoard = numberOfRows => {
 }
 
 document.addEventListener('DOMContentLoaded', renderSquareRowsIntoBoard(16))
+boardDiv.addEventListener('mousedown', () => (mouseIsDown = true))
+boardDiv.addEventListener('mouseup', () => (mouseIsDown = false))
