@@ -8,7 +8,32 @@
   </head>
 
   <body>
-    <div class="wrapper"></div>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container">
+          <div class="tool-bar flex-center">
+            <button class="button" id="board-size-button">
+              Set a new board size
+            </button>
+            <button class="button" id="random-color-button">
+              Active random color mode
+            </button>
+            <button class="button" id="board-guides-button">
+              Active board guides
+            </button>
+            <button class="button button-danger" id="clear-board-button">
+              Clear board
+            </button>
+            <input
+              type="color"
+              name="color"
+              id="color"
+              title="Select a color"
+            />
+          </div>
+        </div>
+      </header>
+    </div>
 
     <script src="index.js"></script>
   </body>
