@@ -102,6 +102,16 @@ const handleBoardGuidesToggle = event => {
   }
 }
 
+const handleClearBoard = event => {
+  const squareRows = [...boardDiv.children]
+
+  squareRows.forEach(squareRow => {
+    const squares = [...squareRow.children]
+
+    squares.map(square => (square.style.backgroundColor = 'transparent'))
+  })
+}
+
 document.addEventListener('DOMContentLoaded', renderSquareRowsIntoBoard(16))
 boardDiv.addEventListener('mousedown', () => (mouseIsDown = true))
 boardDiv.addEventListener('mouseup', () => (mouseIsDown = false))
@@ -111,3 +121,4 @@ randomColorButton.addEventListener('click', handleRandomColorModeToggle)
 colorInput.addEventListener('change', changeRandomColorButtonText)
 colorInput.addEventListener('input', handleColorSelection)
 boardGuidesButton.addEventListener('click', handleBoardGuidesToggle)
+clearBoardButton.addEventListener('click', handleClearBoard)
