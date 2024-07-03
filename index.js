@@ -9,3 +9,7 @@ let mouseIsDown = false
 let currentColor = '#000000'
 let randomColorModeIsActived = false
 let boardGuidesIsActived = false
+
+const generateRandomNumberByRange = (min, max) => {
+  return Math.floor(Math.random() * (max - min)) + min
+}
