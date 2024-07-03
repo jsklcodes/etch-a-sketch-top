@@ -73,6 +73,7 @@ const handleChangeBoardSize = event => {
 
   boardDiv.textContent = ''
   renderSquareRowsIntoBoard(boardSize)
+  toggleBoardGuides()
 }
 
 const changeRandomColorButtonText = () => {
