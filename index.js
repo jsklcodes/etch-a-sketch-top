@@ -21,3 +21,8 @@ const generateRandomHSLColor = () => {
 
   return `hsl(${hue} ${saturation} ${lightness})`
 }
+
+const createSquareHtml = () => {
+  const square = `<div class="square"></div>`
+  return square
+}
