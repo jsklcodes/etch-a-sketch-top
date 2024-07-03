@@ -1,0 +1,67 @@
+/* ============ base styles ============ */
+:root {
+  font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui,
+    helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial,
+    sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+
+  background-color: #eeeeee;
+}
+
+button,
+input {
+  border: none;
+  border-radius: 0.4rem;
+}
+
+input[type='color'] {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  height: 2.9rem;
+}
+
+::-moz-color-swatch,
+::-moz-focus-inner {
+  border: 0;
+}
+
+/* ============ utils ============ */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: min(90%, 76rem);
+  margin-inline: auto;
+}
+
+/* ============ wrapper ============ */
+.wrapper {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  height: 100%;
+}
