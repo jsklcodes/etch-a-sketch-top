@@ -49,7 +49,22 @@ const handleMouseMoveOnBoard = event => {
   }
 }
 
+const handleChangeBoardSize = event => {
+  const boardSize = prompt(
+    'Type the number of squares per side (maximum of 100) for the new board: '
+  )
+
+  if (boardSize > 100) {
+    alert('The number of squares per side must be a maximum of 100.')
+    return
+  }
+
+  boardDiv.textContent = ''
+  renderSquareRowsIntoBoard(boardSize)
+}
+
 document.addEventListener('DOMContentLoaded', renderSquareRowsIntoBoard(16))
 boardDiv.addEventListener('mousedown', () => (mouseIsDown = true))
 boardDiv.addEventListener('mouseup', () => (mouseIsDown = false))
 boardDiv.addEventListener('mousemove', handleMouseMoveOnBoard)
+boardSizeButton.addEventListener('click', handleChangeBoardSize)
